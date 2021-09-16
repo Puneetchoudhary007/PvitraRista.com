@@ -1,0 +1,29 @@
+.center
+{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.sumbitbtn{
+  margin-left: 200px;
+}
+#radiobtn{
+  margin-right: 10px;
+}
+.genderSelector{
+  justify-content: space-between;
+  margin-right: 20px;
+}
+.Signup-form
+{
+    min-width: 500px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+  }

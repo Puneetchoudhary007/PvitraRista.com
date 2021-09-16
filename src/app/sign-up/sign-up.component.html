@@ -1,0 +1,240 @@
+<div class="center">
+    <form class="Signup-form">
+        <h2>Registeration Form for Pvitra Rista</h2>
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline" formcontrol="FirstnameformControl" >
+                        <mat-label>First Name * </mat-label>
+                        <input matInput placeholder="Ravi">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name * </mat-label>
+                        <input matInput placeholder="Kumar">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <mat-radio-group aria-label="Gender">
+                        <mat-label class="genderSelector">Gender: </mat-label>
+                        <mat-radio-button value="1" id="radiobtn">Male</mat-radio-button>
+                        <mat-radio-button value="2">Female</mat-radio-button>
+                      </mat-radio-group>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password * </mat-label>
+                        <input matInput placeholder="Abc@#1232">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm Password * </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. pat@example.com">
+                        <mat-hint>Errors appear instantly!</mat-hint>
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Contact number</mat-label>
+                        <input type="number" matInput [formControl]="contactFormControl" [errorStateMatcher]="matcher"
+                            placeholder="">
+                        <mat-hint>Errors appear instantly!</mat-hint>
+                        <mat-error *ngIf="contactFormControl.hasError('contact') && !contactFormControl.hasError('required')">
+                            Please enter a valid  contact Number
+                        </mat-error>
+                        <mat-error *ngIf="contactFormControl.hasError('required')">
+                            Contact Number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address Line 1 * </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address Line 2 * </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label> Pin code* </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>State</mat-label>
+                        <mat-select [(value)]="selectedState">
+                            <mat-option>None</mat-option>
+                            <mat-option value="Andhra Pradesh">Andhra Pradesh</mat-option>
+                            <mat-option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</mat-option>
+                            <mat-option value="Arunachal Pradesh">Arunachal Pradesh</mat-option>
+                            <mat-option value="Assam">Assam</mat-option>
+                            <mat-option value="Bihar">Bihar</mat-option>
+                            <mat-option value="Chandigarh">Chandigarh</mat-option>
+                            <mat-option value="Chhattisgarh">Chhattisgarh</mat-option>
+                            <mat-option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</mat-option>
+                            <mat-option value="Daman and Diu">Daman and Diu</mat-option>
+                            <mat-option value="Delhi">Delhi</mat-option>
+                            <mat-option value="Lakshadweep">Lakshadweep</mat-option>
+                            <mat-option value="Puducherry">Puducherry</mat-option>
+                            <mat-option value="Goa">Goa</mat-option>
+                            <mat-option value="Gujarat">Gujarat</mat-option>
+                            <mat-option value="Haryana">Haryana</mat-option>
+                            <mat-option value="Himachal Pradesh">Himachal Pradesh</mat-option>
+                            <mat-option value="Jammu and Kashmir">Jammu and Kashmir</mat-option>
+                            <mat-option value="Jharkhand">Jharkhand</mat-option>
+                            <mat-option value="Karnataka">Karnataka</mat-option>
+                            <mat-option value="Kerala">Kerala</mat-option>
+                            <mat-option value="Madhya Pradesh">Madhya Pradesh</mat-option>
+                            <mat-option value="Maharashtra">Maharashtra</mat-option>
+                            <mat-option value="Manipur">Manipur</mat-option>
+                            <mat-option value="Meghalaya">Meghalaya</mat-option>
+                            <mat-option value="Mizoram">Mizoram</mat-option>
+                            <mat-option value="Nagaland">Nagaland</mat-option>
+                            <mat-option value="Odisha">Odisha</mat-option>
+                            <mat-option value="Punjab">Punjab</mat-option>
+                            <mat-option value="Rajasthan">Rajasthan</mat-option>
+                            <mat-option value="Sikkim">Sikkim</mat-option>
+                            <mat-option value="Tamil Nadu">Tamil Nadu</mat-option>
+                            <mat-option value="Telangana">Telangana</mat-option>
+                            <mat-option value="Tripura">Tripura</mat-option>
+                            <mat-option value="Uttar Pradesh">Uttar Pradesh</mat-option>
+                            <mat-option value="Uttarakhand">Uttarakhand</mat-option>
+                            <mat-option value="West Bengal">West Bengal</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+         <tr>
+             <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+             </td>
+         </tr>
+            
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label> Qualification* </mat-label>
+                        <input matInput placeholder="Abc@#1232">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label> Job detail* </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-label>Height:</mat-label>
+                </td>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Feet</mat-label>
+                        <mat-select [(value)]="selectedFeet">
+                          <mat-option>None</mat-option>
+                          <mat-option value="4">4</mat-option>
+                          <mat-option value="5">5</mat-option>
+                          <mat-option value="6">6</mat-option>
+                          <mat-option value="7">7</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>inch</mat-label>
+                        <mat-select [(value)]="selectedInch">
+                          <mat-option>None</mat-option>
+                          <mat-option value="0">0</mat-option>
+                          <mat-option value="1">1</mat-option>
+                          <mat-option value="2">2</mat-option>
+                          <mat-option value="3">3</mat-option>
+                          <mat-option value="3">3</mat-option>
+                          <mat-option value="4">4</mat-option>
+                          <mat-option value="5">5</mat-option>
+                          <mat-option value="6">6</mat-option>
+                          <mat-option value="7">7</mat-option>
+                          <mat-option value="8">8</mat-option>
+                          <mat-option value="9">6</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Religion</mat-label>
+                        <mat-select [(value)]="selectedReligion">
+                          <mat-option>None</mat-option>
+                          <mat-option value="Hinduism">Hinduism</mat-option>
+                          <mat-option value="Sikhism">Sikhism</mat-option>
+                          <mat-option value="Jainism">Jainism</mat-option>
+                          <mat-option value="Christianity">Christianity</mat-option>
+                          <mat-option value="Buddhism">Buddhism</mat-option>
+                          <mat-option value="other">Other</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Caste</mat-label>
+                        <mat-select [(value)]="selectedCaste">
+                          <mat-option>None</mat-option>
+                          <mat-option value="1">Option 1</mat-option>
+                          <mat-option value="2">Option 2</mat-option>
+                          <mat-option value="3">Option 3</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="Nextbtn">
+                    <button type="backtologin" mat-raised-button [routerLink]="['']" color="accent">Back ot Login</button>
+                </td>
+                <td>
+                    <button type="Next" mat-raised-button  color="accent">Next</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
