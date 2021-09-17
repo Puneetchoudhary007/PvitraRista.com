@@ -1,0 +1,99 @@
+<div  class="centerfamilydetails">
+    <form class="familydetailsform">
+        <h4>
+            Please Provide Your Family details*
+        </h4>
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline" formcontrol="familydetails" >
+                        <mat-label> Numbers of Person in family </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+               
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline" formcontrol="FathernameformControl" >
+                        <mat-label>Father Name * </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mother Name * </mat-label>
+                        <input matInput placeholder="">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <mat-radio-group aria-label="familyType">
+                        <mat-label class="selectfamiltype">Family type: </mat-label>
+                        <mat-radio-button value="Nuclear" id="radiobtn">Nuclear</mat-radio-button>
+                        <mat-radio-button value="Joint">Joint</mat-radio-button>
+                      </mat-radio-group>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td >
+                    <mat-radio-group aria-label="family status"  >
+                        <mat-label class="selectfamiltype">Family status: </mat-label>
+                        <mat-radio-button value="MiddleClass" id="radiobtn2">Middle Class</mat-radio-button>
+                        <mat-radio-button value="Upper middleclass"id="radiobtn3">Upper Middle Class</mat-radio-button>
+                        <mat-radio-button value="middleclass"id="radiobtn4" >Upper Class</mat-radio-button>
+                      </mat-radio-group>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <h3>Selected the Languages do you Know*</h3>
+         <mat-checkbox [checked]="selectedLanguage === 'en'" (click)="switchLanguage('en')">English</mat-checkbox>
+        <mat-checkbox [checked]="selectedLanguage === 'fr'" (click)="switchLanguage('fr')">French</mat-checkbox>
+        <mat-checkbox [checked]="selectedLanguage ==='de'" (click)="switchLanguage('de')">German</mat-checkbox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="fill" class="familymember">
+                        <mat-label>How many Brothers do you have</mat-label>
+                        <mat-select [(value)]="selectedbrother">
+                          <mat-option>None</mat-option>
+                          <mat-option value="1">1</mat-option>
+                          <mat-option value="2">2</mat-option>
+                          <mat-option value="3">3</mat-option>
+                          <mat-option value="4">4</mat-option>
+                          <mat-option value="5">5</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="fill" class="familymember">
+                        <mat-label>How many Sisters do you have</mat-label>
+                        <mat-select [(value)]="selectedsisters" >
+                          <mat-option>None</mat-option>
+                          <mat-option value="1">1</mat-option>
+                          <mat-option value="2">2</mat-option>
+                          <mat-option value="3">3</mat-option>
+                          <mat-option value="4">4</mat-option>
+                          <mat-option value="5">5</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td class="FinalSumbit">
+                    <button type="back" mat-raised-button [routerLink]="['/newform']" color="accent">Back</button>
+                </td>
+                <td>
+                    <button type="Next" mat-raised-button [routerLink]="['/occupationform']" color="accent">Next</button>
+                </td>
+            </tr>
+            </table>
+    </form>
+</div>

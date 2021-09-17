@@ -1,0 +1,34 @@
+.dietstatuscentre{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.dietstatus{
+    min-width: 500px;
+    max-width: 1000px;
+    width: 100%;
+}
+#radiobtn{
+    margin-right: 10px;
+  }
+  #radiobtn2{
+    margin-right: 10px;
+  }
+  #radiobtn3{
+    margin-right: 10px;
+  }
+  #yes{
+    margin-right: 10px;
+  }
+  #no{
+    margin-right: 10px;
+  }
+  #yes01{
+    margin-right: 10px;
+  }
+  #no01{
+    margin-right: 10px;
+  }
+ 

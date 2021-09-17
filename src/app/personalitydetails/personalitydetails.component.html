@@ -1,0 +1,114 @@
+<div class="centrepersonality">
+    <form class="personality">
+        <h2>
+            Please Provide Your Personality Details*
+        </h2>
+        <table>
+  <tr>
+    <td>
+        <mat-label>Height:</mat-label>
+    </td>
+    <td>
+        <mat-form-field appearance="fill">
+            <mat-label>Feet</mat-label>
+            <mat-select [(value)]="selectedFeet">
+              <mat-option>None</mat-option>
+              <mat-option value="4">4</mat-option>
+              <mat-option value="5">5</mat-option>
+              <mat-option value="6">6</mat-option>
+              <mat-option value="7">7</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </td>
+    <td>
+        <mat-form-field appearance="fill">
+            <mat-label>inch</mat-label>
+            <mat-select [(value)]="selectedInch">
+              <mat-option>None</mat-option>
+              <mat-option value="0">0</mat-option>
+              <mat-option value="1">1</mat-option>
+              <mat-option value="2">2</mat-option>
+              <mat-option value="3">3</mat-option>
+              <mat-option value="3">3</mat-option>
+              <mat-option value="4">4</mat-option>
+              <mat-option value="5">5</mat-option>
+              <mat-option value="6">6</mat-option>
+              <mat-option value="7">7</mat-option>
+              <mat-option value="8">8</mat-option>
+              <mat-option value="9">6</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </td>
+</tr>
+        <tr>
+            <td >
+                <mat-radio-group aria-label="personalityform"  >
+                    <mat-label class="selectpersonality"><b>Any body Defect:</b> </mat-label><br><br>
+                    <mat-radio-button value="yes" id="radiobtn2">Yes</mat-radio-button>
+                    <mat-radio-button value="No"id="radiobtn3">No</mat-radio-button>
+                  </mat-radio-group>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td >
+                <mat-radio-group aria-label="personalityform"  >
+                    <mat-label class="selectpersonality"><b>Body Type:</b> </mat-label><br><br>
+                    <mat-radio-button value="Slim" id="slim">Slim</mat-radio-button>
+                    <mat-radio-button value="Average"id="average">Average</mat-radio-button>
+                    <mat-radio-button value="Athletic"id="athletic" >Athletic</mat-radio-button>
+                    <mat-radio-button value="Heavy"id="heavy" >Heavy</mat-radio-button>
+                  </mat-radio-group>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td >
+                <mat-radio-group aria-label="personalityform"  >
+                    <mat-label class="selectpersonality"><b>Complextion:</b> </mat-label><br><br>
+                    <mat-radio-button value="very fair" id="veryfairvalue">very fair</mat-radio-button>
+                    <mat-radio-button value="Fair"id="fairvalue">Fair</mat-radio-button>
+                    <mat-radio-button value="Wheatish"id="Wheatishvalue" >Wheatish</mat-radio-button>
+                    <mat-radio-button value="Dark"id="Darkvalue" >Dark</mat-radio-button>
+                  </mat-radio-group>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td >
+                <mat-radio-group aria-label="personalityform"  >
+                    <mat-label class="selectpersonality"><b>Look:</b> </mat-label><br><br>
+                    <mat-radio-button value="Clean Shaved" id="Shavedvalue">Clean Shaved</mat-radio-button>
+                    <mat-radio-button value="Trimmed"id="Trimmedvalue">Trimmed</mat-radio-button>
+                    <mat-radio-button value="Beared"id="Bearedvalue" >Beared</mat-radio-button>
+                    <mat-radio-button value="Turbaned"id="Turbanedvalue" >Turbaned</mat-radio-button>
+                  </mat-radio-group>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field appearance="outline" formcontrol="Aboutpersonality" >
+                    <mat-label > About personality </mat-label>
+                    <input class="Aboutpersonality" matInput placeholder="">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field appearance="outline" formcontrol="Ethnicityform" >
+                    <mat-label > Ethnicity </mat-label>
+                    <input class="Ethnicity" matInput placeholder="Ex:Indian,Thais,Russians">
+                </mat-form-field>
+            </td>
+           
+        </tr>
+        <br>
+    <tr>
+        <td class="FinalSumbit">
+            <button type="back" mat-raised-button [routerLink]="['/occupationform']" color="accent">Back</button>
+        </td>
+          <td class="Nextbtn">
+              <button type="Next" mat-raised-button [routerLink]="['/dietstatus']"   color="accent">Next</button>
+          </td>
+      </tr>
+    </table>
+    </form>
+</div>

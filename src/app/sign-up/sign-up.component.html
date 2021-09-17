@@ -1,5 +1,5 @@
 <div class="center">
-    <form class="Signup-form">
+    <form class="Signup-form"><br>
         <h2>Registeration Form for Pvitra Rista</h2>
         <table>
             <tr>
@@ -72,6 +72,16 @@
             </tr>
             <tr>
                 <td>
+                   <mat-form-field appearance="fill">
+                       <mat-label>date of Birth</mat-label>
+                       <input matInput [matDatepicker]="picker">
+                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                       <mat-datepicker #picker></mat-datepicker>
+                     </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <mat-form-field appearance="outline">
                         <mat-label>Address Line 1 * </mat-label>
                         <input matInput placeholder="">
@@ -138,101 +148,13 @@
                     </mat-form-field>
                 </td>
             </tr>
-         <tr>
-             <td>
-                <mat-form-field appearance="fill">
-                    <mat-label>date of Birth</mat-label>
-                    <input matInput [matDatepicker]="picker">
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                  </mat-form-field>
-             </td>
-         </tr>
-            
+         
             <tr>
-                <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label> Qualification* </mat-label>
-                        <input matInput placeholder="Abc@#1232">
-                    </mat-form-field>
+                <td class="FinalSumbit">
+                    <button type="back" mat-raised-button [routerLink]="['']" color="accent">Back to login</button>
                 </td>
-                <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label> Job detail* </mat-label>
-                        <input matInput placeholder="">
-                    </mat-form-field>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <mat-label>Height:</mat-label>
-                </td>
-                <td>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Feet</mat-label>
-                        <mat-select [(value)]="selectedFeet">
-                          <mat-option>None</mat-option>
-                          <mat-option value="4">4</mat-option>
-                          <mat-option value="5">5</mat-option>
-                          <mat-option value="6">6</mat-option>
-                          <mat-option value="7">7</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                </td>
-                <td>
-                    <mat-form-field appearance="fill">
-                        <mat-label>inch</mat-label>
-                        <mat-select [(value)]="selectedInch">
-                          <mat-option>None</mat-option>
-                          <mat-option value="0">0</mat-option>
-                          <mat-option value="1">1</mat-option>
-                          <mat-option value="2">2</mat-option>
-                          <mat-option value="3">3</mat-option>
-                          <mat-option value="3">3</mat-option>
-                          <mat-option value="4">4</mat-option>
-                          <mat-option value="5">5</mat-option>
-                          <mat-option value="6">6</mat-option>
-                          <mat-option value="7">7</mat-option>
-                          <mat-option value="8">8</mat-option>
-                          <mat-option value="9">6</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Religion</mat-label>
-                        <mat-select [(value)]="selectedReligion">
-                          <mat-option>None</mat-option>
-                          <mat-option value="Hinduism">Hinduism</mat-option>
-                          <mat-option value="Sikhism">Sikhism</mat-option>
-                          <mat-option value="Jainism">Jainism</mat-option>
-                          <mat-option value="Christianity">Christianity</mat-option>
-                          <mat-option value="Buddhism">Buddhism</mat-option>
-                          <mat-option value="other">Other</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                </td>
-                <td>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Caste</mat-label>
-                        <mat-select [(value)]="selectedCaste">
-                          <mat-option>None</mat-option>
-                          <mat-option value="1">Option 1</mat-option>
-                          <mat-option value="2">Option 2</mat-option>
-                          <mat-option value="3">Option 3</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-
-                </td>
-            </tr>
-            <tr>
                 <td class="Nextbtn">
-                    <button type="backtologin" mat-raised-button [routerLink]="['']" color="accent">Back ot Login</button>
-                </td>
-                <td>
-                    <button type="Next" mat-raised-button  color="accent">Next</button>
+                    <button type="Next" mat-raised-button [routerLink]="['/newform']"  color="accent">Next</button>
                 </td>
             </tr>
         </table>

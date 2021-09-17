@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
 
     'username': string="";
     'password': string="";
+    
   
     ngOnInit() {
     }
@@ -24,4 +25,4 @@ export class LoginComponent implements OnInit {
         alert("Invalid credentials");
       }
     }
-    }
+  }

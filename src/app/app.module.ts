@@ -20,11 +20,18 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { NewformComponent } from './newform/newform.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FamilydetailformComponent } from './familydetailform/familydetailform.component';
+import { OccupationformComponent } from './occupationform/occupationform.component';
+import { PersonalitydetailsComponent } from './personalitydetails/personalitydetails.component';
+import { DietstatusComponent } from './dietstatus/dietstatus.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent, HeaderComponent,SignupComponent
+    AppComponent,LoginComponent, HeaderComponent,SignupComponent, NewformComponent, FamilydetailformComponent, OccupationformComponent, PersonalitydetailsComponent, DietstatusComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     BrowserAnimationsModule,MatInputModule,FormsModule,ReactiveFormsModule,
     MatButtonModule,MatFormFieldModule,MatCardModule,MatRadioModule,MatIconModule,
     MatTableModule,MatMenuModule,MatToolbarModule,MatSelectModule,
-    MatProgressSpinnerModule,MatDatepickerModule,  MatNativeDateModule
+    MatProgressSpinnerModule,MatDatepickerModule,  MatNativeDateModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

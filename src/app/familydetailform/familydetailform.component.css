@@ -1,0 +1,25 @@
+.centerfamilydetails
+{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.familydetailsform{
+    min-width: 500px;
+    max-width: 1000px;
+    width: 100%;
+}
+#radiobtn{
+    margin-right: 10px;
+  }
+  #radiobtn2{
+    margin-right: 10px;
+  }
+  #radiobtn3{
+    margin-right: 10px;
+  }
+ .familymember{
+     width: 400px;
+ }

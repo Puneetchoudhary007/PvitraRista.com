@@ -10,11 +10,9 @@ import {ErrorStateMatcher} from '@angular/material/core';
 })
 export class SignupComponent implements OnInit {
   constructor() { }
-  selectedFeet = '';
-  selectedInch='';
+  
   selectedState='';
-  selectedReligion='';
-  selectedCaste='';
+  
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,

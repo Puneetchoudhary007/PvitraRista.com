@@ -1,0 +1,56 @@
+<div class="dietstatuscentre">
+    <form class=dietstatus>
+        <h2>
+            Please Provide Your Diet And Hobbies Details*
+        </h2>
+<table>
+    <tr>
+        <td >
+            <mat-radio-group aria-label="dietstatusform"  >
+                <mat-label class="selectdietstatus"><b>Diet Status:</b> </mat-label><br><br>
+                <mat-radio-button value="yes" id="radiobtn2">Vegetrarian</mat-radio-button>
+                <mat-radio-button value="No"id="radiobtn3">Non-Vegetrarian</mat-radio-button>
+                <mat-radio-button value="No"id="radiobtn3">Eggetraian</mat-radio-button>
+              </mat-radio-group>
+        </td>
+    </tr>
+    <br>
+        <tr>
+        <td >
+            <mat-radio-group aria-label="drinkingstatus"  >
+                <mat-label class="selectdrinking"><b>Drinking:</b> </mat-label><br><br>
+                <mat-radio-button value="Yes" id="yes">Yes</mat-radio-button>
+                <mat-radio-button value="No"id="no">No</mat-radio-button>
+                <mat-radio-button value="Occasionally"id="Occasionally" >Occasionally</mat-radio-button>
+              </mat-radio-group>
+        </td>
+        <td >
+            <mat-radio-group aria-label="Smokingstatus"  >
+                <mat-label class="selectdrinking"><b>Smoking:</b> </mat-label><br><br>
+                <mat-radio-button value="Yes" id="yes01">Yes</mat-radio-button>
+                <mat-radio-button value="No"id="no01">No</mat-radio-button>
+                <mat-radio-button value="Occasionally"id="Occasionally01" >Occasionally</mat-radio-button>
+              </mat-radio-group>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <mat-form-field appearance="outline" formcontrol="Aboutself" >
+                <mat-label > About Self </mat-label>
+                <input class="AboutSelf" matInput placeholder="">
+            </mat-form-field>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td class="FinalSumbit">
+            <button type="back" mat-raised-button [routerLink]="['/personalitydetails']" color="accent">Back</button>
+        </td>
+          <td class="Nextbtn">
+              <button type="Next" mat-raised-button  color="accent">Next</button>
+          </td>
+      </tr>
+</table>
+    </form>
+</div>

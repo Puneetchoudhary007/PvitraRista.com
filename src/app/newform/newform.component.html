@@ -1,0 +1,87 @@
+<div class="centre">
+    <form class="newform">
+    <h2>Please Provide Your Personal detail*</h2>
+    
+<table>
+  <tr>
+    <td >
+        <mat-radio-group aria-label="Marital status status"  >
+            <mat-label class="selectMarital">Marital status: </mat-label><br>
+            <mat-radio-button value="unmarried" id="radiobtn2">Unmarried </mat-radio-button>
+            <mat-radio-button value="Divorce"id="radiobtn3">Divorce</mat-radio-button>
+            <mat-radio-button value="widow"id="radiobtn4" >widow</mat-radio-button>
+          </mat-radio-group>
+    </td>
+</tr>
+<br>
+    
+    <tr>
+        <td>
+            <mat-form-field appearance="outline">
+                <mat-label> Other </mat-label>
+                <input matInput placeholder=" ">
+            </mat-form-field>
+        </td>
+        
+    </tr>
+   
+  <br>
+    <tr>
+      <td>
+          <mat-form-field appearance="fill">
+              <mat-label>Religion</mat-label>
+              <mat-select [(value)]="selectedReligion">
+                <mat-option>None</mat-option>
+                <mat-option value="Hinduism">Hinduism</mat-option>
+                <mat-option value="Sikhism">Sikhism</mat-option>
+                <mat-option value="Jainism">Jainism</mat-option>
+                <mat-option value="Christianity">Christianity</mat-option>
+                <mat-option value="Buddhism">Buddhism</mat-option>
+                <mat-option value="other">Other</mat-option>
+              </mat-select>
+            </mat-form-field>
+      </td>
+      <td>
+          <mat-form-field appearance="fill">
+              <mat-label>Caste</mat-label>
+              <mat-select [(value)]="selectedCaste">
+                <mat-option>None</mat-option>
+                <mat-option value="1">Option 1</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+                <mat-option value="3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+      </td>
+  </tr>
+    <tr>
+        <td>
+            <mat-form-field appearance="fill">
+                <mat-label>Manglik</mat-label>
+                <mat-select [(value)]="selectedManglik">
+                  <mat-option value="4">Yes</mat-option>
+                  <mat-option value="5">No</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </td>
+    </tr>
+    <tr>
+      <td >
+          <mat-radio-group aria-label="Marital status"  >
+              <mat-label class="selectMarital">Do you believe in Kundi match: </mat-label><br>
+              <mat-radio-button value="yes" id="radiobtn2">Yes </mat-radio-button>
+              <mat-radio-button value="no"id="radiobtn3">No</mat-radio-button>
+            </mat-radio-group>
+      </td>
+  </tr>
+  <br>
+    <tr>
+        <td class="FinalSumbit">
+            <button type="back" mat-raised-button [routerLink]="['//sign-up']" color="accent">Back</button>
+        </td>
+          <td class="Nextbtn">
+              <button type="Next" mat-raised-button [routerLink]="['/familydetailform']"  color="accent">Next</button>
+          </td>
+      </tr>
+</table>
+    </form>
+</div>

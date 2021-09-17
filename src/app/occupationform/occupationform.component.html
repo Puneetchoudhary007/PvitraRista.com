@@ -1,0 +1,41 @@
+<div class="centreoccupationform">
+    <form class="occupationform">
+        <h2>
+            Please Provide Your Occupation Details*
+        </h2>
+        <table>
+        <tr>
+            <td >
+                <mat-radio-group aria-label="occupationform"  >
+                    <mat-label class="selectoccupation"><b>occupation:</b> </mat-label><br><br>
+                    <mat-radio-button value="job" id="radiobtn2">Job</mat-radio-button>
+                    <mat-radio-button value="Business"id="radiobtn3">Business</mat-radio-button>
+                    <mat-radio-button value="Agriculture"id="radiobtn4" >Agriculture</mat-radio-button>
+                    <mat-radio-button value="Studying"id="radiobtn5" >Studying</mat-radio-button>
+                    <mat-radio-button value="Not working"id="radiobtn6" >Not working</mat-radio-button>
+
+                  </mat-radio-group>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <mat-form-field appearance="outline" formcontrol="Aboutoccupation" >
+                    <mat-label > About Occupation </mat-label>
+                    <input class="Aboutoccupation" matInput placeholder="">
+                </mat-form-field>
+            </td>
+           
+        </tr>
+        <br>
+    <tr>
+        <td class="FinalSumbit">
+            <button type="back" mat-raised-button [routerLink]="['/familydetailform']" color="accent">Back</button>
+        </td>
+          <td class="Nextbtn">
+              <button type="Next" mat-raised-button  [routerLink]="['/personalitydetails']"   color="accent">Next</button>
+          </td>
+      </tr>
+    </table>
+    </form>
+</div>
