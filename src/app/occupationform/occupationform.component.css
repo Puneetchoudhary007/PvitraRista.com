@@ -4,12 +4,9 @@
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
-
 }
 .occupationform{
-    min-width: 100px;
-    max-width: 1100px;
+    max-width: 1000px;
     width: 100%;
 }
 .Aboutoccupation{

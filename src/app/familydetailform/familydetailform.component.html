@@ -6,25 +6,46 @@
         <table>
             <tr>
                 <td>
-                    <mat-form-field appearance="outline" formcontrol="familydetails" >
-                        <mat-label> Numbers of Person in family </mat-label>
-                        <input matInput placeholder="">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Numbers of Person in family</mat-label>
+                        <input type="number" matInput [formControl]="personinfamilyFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. 1">
+                        <mat-error *ngIf="personinfamilyFormControl.hasError('familypersons') && !personinfamilyFormControl.hasError('required')">
+                            Please enter a valid Numbers
+                        </mat-error>
+                        <mat-error *ngIf="personinfamilyFormControl.hasError('required')">
+                            familypersons is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
                
             </tr>
             <tr>
                 <td>
-                    <mat-form-field appearance="outline" formcontrol="FathernameformControl" >
-                        <mat-label>Father Name * </mat-label>
-                        <input matInput placeholder="">
+                    <mat-form-field class="example-full-width" appearance="outline" class="Parents">
+                        <mat-label>Father Name</mat-label>
+                        <input type="text" matInput [formControl]="fathernameFormControl" [errorStateMatcher]="matcher" 
+                            placeholder="Ex. ">
+                        <mat-error *ngIf="fathernameFormControl.hasError('fatherName') && !fathernameFormControl.hasError('required')">
+                            Please enter a valid father name
+                        </mat-error>
+                        <mat-error *ngIf="fathernameFormControl.hasError('required')">
+                        father name is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
-                </td>
-                <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Mother Name * </mat-label>
-                        <input matInput placeholder="">
+                
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Mother Name</mat-label>
+                        <input type="text" matInput [formControl]="mothernameFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. ">
+                        <mat-error *ngIf="mothernameFormControl.hasError('motherName') && !mothernameFormControl.hasError('required')">
+                            Please enter a valid Mother name
+                        </mat-error>
+                        <mat-error *ngIf="mothernameFormControl.hasError('required')">
+                            Mother name is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
+                
                 </td>
             </tr>
             <tr>

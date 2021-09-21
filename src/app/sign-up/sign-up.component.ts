@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -10,9 +8,14 @@ import {ErrorStateMatcher} from '@angular/material/core';
 })
 export class SignupComponent implements OnInit {
   constructor() { }
+  selectedState='string';
   
-  selectedState='';
-  
+  firstnameFormControl=new FormControl('', [
+    Validators.required,
+  ]);
+  lastnameFormControl=new FormControl('', [
+    Validators.required,
+  ]);
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -20,9 +23,26 @@ export class SignupComponent implements OnInit {
   contactFormControl=new FormControl('', [
     Validators.required,
   ]);
-  FirstnameformControl=new FormControl('', [
+  genderformControl=new FormControl('', [
     Validators.required,
   ]);
+  passwordformcontrol=new FormControl('', [
+    Validators.required,
+  ]);
+  confirmpasswordFormControl=new FormControl('', [
+    Validators.required,
+  ]);
+  
+  AddressFormControl=new FormControl('', [
+    Validators.required,
+  ]);
+  AddressFormControl2=new FormControl('', [
+    Validators.required,
+  ]);
+  pincodeFormControl=new FormControl('', [
+    Validators.required,
+  ]);
+ 
   matcher = new MyErrorStateMatcher();
 
 ngOnInit() {

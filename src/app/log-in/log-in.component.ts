@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./log-in.component.css']
 })
 export class LoginComponent implements OnInit {
+  imageSrc = '..\assets\PvitraRista.png'; 
+   imageAlt = 'PR'
 
   constructor(private router: Router) { }
 

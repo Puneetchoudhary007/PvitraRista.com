@@ -6,7 +6,6 @@
     align-items: center;
 }
 .dietstatus{
-    min-width: 500px;
     max-width: 1000px;
     width: 100%;
 }
@@ -31,4 +30,3 @@
   #no01{
     margin-right: 10px;
   }
- 

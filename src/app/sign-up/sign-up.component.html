@@ -4,21 +4,35 @@
         <table>
             <tr>
                 <td>
-                    <mat-form-field appearance="outline" formcontrol="FirstnameformControl" >
-                        <mat-label>First Name * </mat-label>
-                        <input matInput placeholder="Ravi">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input type="name" matInput [formControl]="firstnameFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. Puneet">
+                        <mat-error *ngIf="firstnameFormControl.hasError('firstname') && !firstnameFormControl.hasError('required')">
+                            Please enter a valid First Name
+                        </mat-error>
+                        <mat-error *ngIf="firstnameFormControl.hasError('required')">
+                            firstname is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
                 <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Last Name * </mat-label>
-                        <input matInput placeholder="Kumar">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input type="name" matInput [formControl]="lastnameFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. choudhary">
+                        <mat-error *ngIf="lastnameFormControl.hasError('lastname') && !lastnameFormControl.hasError('required')">
+                            Please enter a valid last Name
+                        </mat-error>
+                        <mat-error *ngIf="lastnameFormControl.hasError('required')">
+                            lastname is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
             </tr>
             <tr>
                 <td >
-                    <mat-radio-group aria-label="Gender">
+                    <mat-radio-group aria-label="Gender" formcontrol="genderformControl">
                         <mat-label class="genderSelector">Gender: </mat-label>
                         <mat-radio-button value="1" id="radiobtn">Male</mat-radio-button>
                         <mat-radio-button value="2">Female</mat-radio-button>
@@ -27,26 +41,40 @@
             </tr>
             <tr>
                 <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Password * </mat-label>
-                        <input matInput placeholder="Abc@#1232">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input type="name" matInput [formControl]="passwordformcontrol" [errorStateMatcher]="matcher"
+                            placeholder="Ex. abc@134">
+                        <mat-error *ngIf="passwordformcontrol.hasError('password') && !passwordformcontrol.hasError('required')">
+                            Please enter a valid password
+                        </mat-error>
+                        <mat-error *ngIf="passwordformcontrol.hasError('required')">
+                            password is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
+                
                 <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Confirm Password * </mat-label>
-                        <input matInput placeholder="">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input type="name" matInput [formControl]="confirmpasswordFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. abc@345">
+                        <mat-error *ngIf="confirmpasswordFormControl.hasError('confirmpassword') && !confirmpasswordFormControl.hasError('required')">
+                            Please enter a valid password
+                        </mat-error>
+                        <mat-error *ngIf="confirmpasswordFormControl.hasError('required')">
+                            Repeat password is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-form-field class="example-full-width" appearance="outline">
                         <mat-label>Email</mat-label>
                         <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
                             placeholder="Ex. pat@example.com">
-                        <mat-hint>Errors appear instantly!</mat-hint>
                         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                             Please enter a valid email address
                         </mat-error>
@@ -56,11 +84,10 @@
                     </mat-form-field>
                 </td>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-form-field class="example-full-width" appearance="outline">
                         <mat-label>Contact number</mat-label>
                         <input type="number" matInput [formControl]="contactFormControl" [errorStateMatcher]="matcher"
                             placeholder="">
-                        <mat-hint>Errors appear instantly!</mat-hint>
                         <mat-error *ngIf="contactFormControl.hasError('contact') && !contactFormControl.hasError('required')">
                             Please enter a valid  contact Number
                         </mat-error>
@@ -72,7 +99,7 @@
             </tr>
             <tr>
                 <td>
-                   <mat-form-field appearance="fill">
+                   <mat-form-field appearance="outline" formcontrol="dateofbirth">
                        <mat-label>date of Birth</mat-label>
                        <input matInput [matDatepicker]="picker">
                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -82,31 +109,52 @@
             </tr>
             <tr>
                 <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Address Line 1 * </mat-label>
-                        <input matInput placeholder="">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Address line 1 </mat-label>
+                        <input type="text" matInput [formControl]="AddressFormControl" [errorStateMatcher]="matcher"
+                            placeholder="">
+                        <mat-error *ngIf="AddressFormControl.hasError('Address') && !AddressFormControl.hasError('required')">
+                            Please enter a valid  Address
+                        </mat-error>
+                        <mat-error *ngIf="AddressFormControl.hasError('required')">
+                            Address is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
                 <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Address Line 2 * </mat-label>
-                        <input matInput placeholder="">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Address line 2 </mat-label>
+                        <input type="text" matInput [formControl]="AddressFormControl2" [errorStateMatcher]="matcher"
+                            placeholder="filladdress">
+                        <mat-error *ngIf="AddressFormControl2.hasError('fillAddress') && !AddressFormControl2.hasError('required')">
+                            Please enter a valid  Address
+                        </mat-error>
+                        <mat-error *ngIf="AddressFormControl2.hasError('required')">
+                            Address is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <mat-form-field appearance="outline">
-                        <mat-label> Pin code* </mat-label>
-                        <input matInput placeholder="">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Pin code</mat-label>
+                        <input type="name" matInput [formControl]="pincodeFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. 123456">
+                        <mat-error *ngIf="pincodeFormControl.hasError('pincode') && !pincodeFormControl.hasError('required')">
+                            Please enter a valid pincode
+                        </mat-error>
+                        <mat-error *ngIf="pincodeFormControl.hasError('required')">
+                            Pin code is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline" >
                         <mat-label>State</mat-label>
-                        <mat-select [(value)]="selectedState">
+                        <mat-select [(value)]="selectedState" >
                             <mat-option>None</mat-option>
                             <mat-option value="Andhra Pradesh">Andhra Pradesh</mat-option>
                             <mat-option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</mat-option>
@@ -150,10 +198,10 @@
             </tr>
          
             <tr>
-                <td class="FinalSumbit">
+                <td class="Back" formcontrol="backbtnformcontrol">
                     <button type="back" mat-raised-button [routerLink]="['']" color="accent">Back to login</button>
                 </td>
-                <td class="Nextbtn">
+                <td class="Nextbtn" formcontrol="Nextbtnformcontrol">
                     <button type="Next" mat-raised-button [routerLink]="['/newform']"  color="accent">Next</button>
                 </td>
             </tr>
