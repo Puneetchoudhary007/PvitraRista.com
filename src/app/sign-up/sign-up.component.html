@@ -4,7 +4,7 @@
         <table>
             <tr>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="FirstName">
                         <mat-label>First Name</mat-label>
                         <input type="name" matInput [formControl]="firstnameFormControl" [errorStateMatcher]="matcher"
                             placeholder="Ex. Puneet">
@@ -17,7 +17,7 @@
                     </mat-form-field>
                 </td>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="LastName">
                         <mat-label>Last Name</mat-label>
                         <input type="name" matInput [formControl]="lastnameFormControl" [errorStateMatcher]="matcher"
                             placeholder="Ex. choudhary">
@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td >
-                    <mat-radio-group aria-label="Gender" formcontrol="genderformControl">
+                    <mat-radio-group aria-label="Gender" formcontrol="genderformControl" value="gender">
                         <mat-label class="genderSelector">Gender: </mat-label>
                         <mat-radio-button value="1" id="radiobtn">Male</mat-radio-button>
                         <mat-radio-button value="2">Female</mat-radio-button>
@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="PasswordRequired">
                         <mat-label>Password</mat-label>
                         <input type="name" matInput [formControl]="passwordformcontrol" [errorStateMatcher]="matcher"
                             placeholder="Ex. abc@134">
@@ -55,7 +55,7 @@
                 </td>
                 
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="confirmPasswordRequired">
                         <mat-label>Confirm Password</mat-label>
                         <input type="name" matInput [formControl]="confirmpasswordFormControl" [errorStateMatcher]="matcher"
                             placeholder="Ex. abc@345">
@@ -71,7 +71,7 @@
 
             <tr>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="EmailRequired">
                         <mat-label>Email</mat-label>
                         <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
                             placeholder="Ex. pat@example.com">
@@ -84,7 +84,7 @@
                     </mat-form-field>
                 </td>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="ContactNumber">
                         <mat-label>Contact number</mat-label>
                         <input type="number" matInput [formControl]="contactFormControl" [errorStateMatcher]="matcher"
                             placeholder="">
@@ -109,7 +109,7 @@
             </tr>
             <tr>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="AddressLine1">
                         <mat-label>Address line 1 </mat-label>
                         <input type="text" matInput [formControl]="AddressFormControl" [errorStateMatcher]="matcher"
                             placeholder="">
@@ -122,7 +122,7 @@
                     </mat-form-field>
                 </td>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="AddressLine2">
                         <mat-label>Address line 2 </mat-label>
                         <input type="text" matInput [formControl]="AddressFormControl2" [errorStateMatcher]="matcher"
                             placeholder="filladdress">
@@ -137,7 +137,7 @@
             </tr>
             <tr>
                 <td>
-                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-form-field class="example-full-width" appearance="outline" value="PinCodeRequired">
                         <mat-label>Pin code</mat-label>
                         <input type="name" matInput [formControl]="pincodeFormControl" [errorStateMatcher]="matcher"
                             placeholder="Ex. 123456">
